@@ -7,7 +7,7 @@ const ListQuestion = ({ data, setCountRepCorrect, countRepCorrect }) => {
   const [forSaveID, setforSaveID] = useState([]);
   //end
   // timer
-  const [timeLeft, setTimeLeft] = useState(1 * 60);
+  const [timeLeft, setTimeLeft] = useState(15 * 60);
   useEffect(() => {
     const interval = setInterval(() => {
       if (timeLeft > 0) {
@@ -32,9 +32,9 @@ const ListQuestion = ({ data, setCountRepCorrect, countRepCorrect }) => {
         Time left:{" "}
         <span
           className={
-            timeLeft < 60 && timeLeft > 30
+            timeLeft < 300 && timeLeft > 120
               ? "lessThenTen"
-              : timeLeft <= 30
+              : timeLeft <= 120
               ? "lessThenFive"
               : ""
           }
