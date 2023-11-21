@@ -53,6 +53,30 @@ a{
 }
 /* End Home Page */
 /* Style for part Quiz */
+.timer{
+  display: block;
+  width: 10%;
+  text-align: right;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.timer span{
+  margin-left: 10px;
+  border: 1px solid;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: lightgreen;
+  color: white;
+}
+.lessThenTen{
+  background-color: lightsalmon !important;
+}
+.lessThenFive{
+  background-color: red !important;
+}
 .tit{
  text-align: center;
  margin-top: 50px !important;
