@@ -7,7 +7,7 @@ const ListQuestion = ({ data, setCountRepCorrect, countRepCorrect }) => {
   const [forSaveID, setforSaveID] = useState([]);
   //end
   // timer
-  const [timeLeft, setTimeLeft] = useState(15 * 60);
+  const [timeLeft, setTimeLeft] = useState(8 * 60);
   useEffect(() => {
     const interval = setInterval(() => {
       if (timeLeft > 0) {
