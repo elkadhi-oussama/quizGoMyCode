@@ -7,7 +7,7 @@ const ListQuestion = ({ data, setCountRepCorrect, countRepCorrect }) => {
   const [forSaveID, setforSaveID] = useState([]);
   //end
   // timer
-  const [timeLeft, setTimeLeft] = useState(8 * 60);
+  const [timeLeft, setTimeLeft] = useState(1.5 * 60 * 60);
   useEffect(() => {
     const interval = setInterval(() => {
       if (timeLeft > 0) {
@@ -42,10 +42,11 @@ const ListQuestion = ({ data, setCountRepCorrect, countRepCorrect }) => {
           {parseInt(timeLeft / 60)}:{timeLeft % 60}
         </span>
       </p>
-      <h1 className="tit">Quiz App Introduction to Web Development</h1>
+      <h1 className="tit">Quiz App Cyber Security</h1>
       <div className="listQuiz">
-        {data.map((item) => (
+        {data.map((item, i) => (
           <Quiz
+          num = {i}
             key={item.id}
             forSaveID={forSaveID}
             setforSaveID={setforSaveID}

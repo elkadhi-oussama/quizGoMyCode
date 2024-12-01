@@ -3,7 +3,7 @@ import React from "react";
 const Result = ({ score }) => {
   return (
     <div className="Result">
-      {score >= 50 ? (
+      {score >= 75 ? (
         <>
           <h3>
             {" "}

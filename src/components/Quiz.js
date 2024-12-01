@@ -6,6 +6,7 @@ const Quiz = ({
   countRepCorrect,
   forSaveID,
   setforSaveID,
+  num
 }) => {
   // function for change color answer clicked
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -39,7 +40,7 @@ const Quiz = ({
   return (
     <>
       <div className="Quiz">
-        <h3 className="Ques"> {item.question} </h3>
+        <h3 className="Ques"> {num+1}- {item.question} </h3>
         {item.response.map((rep, i) => (
           <div key={i}>
             <ul>
@@ -50,6 +51,7 @@ const Quiz = ({
                   return (handleClick(i), handleCheck(rep, item));
                 }}
               >
+              {i+1}-
                 {" "}
                 {rep}{" "}
               </li>
